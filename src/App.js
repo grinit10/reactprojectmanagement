@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Navbar from './components/layout/Navbar';
 import DashBoard from './components/dashboard/Dashboard';
+import ProjectDetails from './components/project/ProjectDetails';
 
 class App extends Component {
   render() {
@@ -10,7 +11,8 @@ class App extends Component {
         <div className="App">
           <Navbar></Navbar>
           <Switch>
-            <Route path='' component={DashBoard}></Route>
+            <Route path='/project/:id' component={ProjectDetails}></Route>
+            <Route path='/' component={DashBoard}></Route>
           </Switch>
           {/* <DashBoard></DashBoard> */}
         </div>
